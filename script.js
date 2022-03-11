@@ -17,9 +17,9 @@ fetch("https://sb-cats.herokuapp.com/api/show")
             innerHTML += "</tr>"
 
             dataJSON.data.forEach(cat => {
-                innerHTML += "</tr>"
+                innerHTML += "<tr>"
                 headers.forEach(title =>
-                    innerHTML += `<td>${cat[title]}</td>`
+                    innerHTML += `<td>${cat[title]? cat[title]: ""}</td>`
                     )
                     innerHTML += "</tr>"
             })
